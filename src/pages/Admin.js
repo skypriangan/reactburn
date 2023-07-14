@@ -2,13 +2,13 @@
 import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import jwt_decode from "jwt-decode";
-// import api_url from "../components/shared/config";
+import api_url from "../components/shared/config";
 
 const Admin = () => {
   const token= localStorage.getItem("tokens");
   const decode= jwt_decode(token);
-  // const path_image= "public/img";
-  // const image =api_url + path_image + '/' + decode.avatar
+  const path_image= "public/img";
+  const image =api_url + path_image + '/' + decode.avatar
   // console.log(decode)
   
   return (
@@ -27,12 +27,12 @@ const Admin = () => {
                 <Card.Text>company      : {decode.company}      </Card.Text>                
               </Card.Body>
             </Card>
-            {/* <Card>
+            <Card>
               <Card.Body>
                 <Card.Title>avatar</Card.Title>
-                <Card.Text> <img src={image}/> {decode.avatar} </Card.Text>
+                <Card.Text> <img src={image} alt="Avatar" /> {decode.avatar} </Card.Text>
               </Card.Body>
-            </Card> */}
+            </Card>
       </Row>
     </>
   );

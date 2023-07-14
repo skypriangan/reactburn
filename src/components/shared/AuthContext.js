@@ -28,7 +28,7 @@ export const AuthContextProvider = ({ children }) => {
   };
   const logout = async () => {
     await axios.post(
-      "http://siska-dev-api.jakpro.co.id/v1/logout",null,
+      api_url + "v1/logout",null,
       {
          headers: {
             "Content-type": "application/json",

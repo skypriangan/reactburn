@@ -82,7 +82,7 @@ const InfoJwt = () => {
             <Card>
               <Card.Body>
                 <Card.Title>avatar</Card.Title>
-                <Card.Text> <img src={image}/> {decode.avatar} </Card.Text>
+                <Card.Text> <img src={image} alt="Avatar" /> {decode.avatar} </Card.Text>
               </Card.Body>
             </Card>
             <Card>
